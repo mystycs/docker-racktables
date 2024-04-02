@@ -55,6 +55,6 @@ docker exec racktables chown www-data:nogroup /var/www/racktables/wwwroot/inc/se
 Once you have completed these steps, RackTables should be installed and ready to use. Complete the instructions on screen.
 
 For more information about RackTables, visit the [official website](https://www.racktables.org/).
-```
+
 
 Feel free to adjust the content as needed for your specific Docker build and RackTables setup.
