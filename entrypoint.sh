@@ -10,20 +10,20 @@ fi
 
 # Secure the MariaDB installation (you can add your own settings here)
 # Note: For production use, it's recommended to set a strong root password and adjust other security settings.
-# replace secret with your desired password
 mysql_secure_installation <<EOF
 
 y
-mysecretpassword
-mysecretpassword
+$MARIADB_ROOT_PASSWORD
+$MARIADB_ROOT_PASSWORD
 y
 y
 y
 y
 EOF
 
-#Set up secret.php file with proper permissions
+#Set up secret.php file
 touch '/var/www/racktables/wwwroot/inc/secret.php'
+
 chmod a=rw '/var/www/racktables/wwwroot/inc/secret.php'
 
 # Install PHP extensions
