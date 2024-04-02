@@ -37,10 +37,9 @@ Follow the on-screen instructions to complete the installation process.
 
 During the installation process, you will need to set up the database schema. In step 3 of the installation process, use the following commands to create the database and user:
 
-```sql
-CREATE DATABASE racktables_db CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER racktables_user@localhost IDENTIFIED BY 'MY_SECRET_PASSWORD';
-GRANT ALL PRIVILEGES ON racktables_db.* TO racktables_user@localhost;
+```bash
+docker exec -it racktables mysql -uroot -p -e "CREATE DATABASE racktables_db CHARACTER SET utf8 COLLATE utf8_general_ci; CREATE USER 'racktables_user'@'localhost' IDENTIFIED BY 'MY_SECRET_PASSWORD'; GRANT ALL PRIVILEGES ON racktables_db.* TO 'racktables_user'@'localhost';"
+
 ```
 
 Replace `MY_SECRET_PASSWORD` with the password you choose.
