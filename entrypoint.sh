@@ -8,19 +8,6 @@ fi
 # Start MariaDB
 /etc/init.d/mysql start
 
-# Secure the MariaDB installation (you can add your own settings here)
-# Note: For production use, it's recommended to set a strong root password and adjust other security settings.
-mysql_secure_installation <<EOF
-
-y
-$MARIADB_ROOT_PASSWORD
-$MARIADB_ROOT_PASSWORD
-y
-y
-y
-y
-EOF
-
 #Set up secret.php file
 touch '/var/www/racktables/wwwroot/inc/secret.php'
 
